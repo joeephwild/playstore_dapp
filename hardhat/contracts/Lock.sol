@@ -32,3 +32,4 @@ contract Lock {
         owner.transfer(address(this).balance);
     }
 }
+Done: addition of the App contract that developers/organizations can use to mint applications and create NFT packs for their applications.
