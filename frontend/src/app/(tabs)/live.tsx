@@ -1,12 +1,28 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from "react";
+import { Camera, CameraType } from "expo-camera";
+import { useState } from "react";
+import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const live = () => {
-  return (
-    <View>
-      <Text>live</Text>
-    </View>
-  )
-}
+  const [type, setType] = useState(CameraType.back);
+  const [permission, requestPermission] = Camera.useCameraPermissions();
 
-export default live
+  function toggleCameraType() {
+    setType((current) =>
+      current === CameraType.back ? CameraType.front : CameraType.back
+    );
+  }
+  return (
+    <SafeAreaView
+      style={{
+        flex: 1,
+        minHeight: "auto"
+      }}
+    >
+      <Camera style={{ flex: 1, minHeight: "auto" }} type={type}></Camera>
+    </SafeAreaView>
+  );
+};
+
+export default live;

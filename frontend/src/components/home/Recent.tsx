@@ -8,7 +8,9 @@ const AppCard = ({ item }) => {
   return (
     <Pressable onPress={() => router.push(`/appDetail/${item.title}`)} style={{ alignItems: "center", maxWidth: 125 }}>
       <Image
-        source={item.image}
+        source={{
+          uri: item.image
+        }}
         style={{
           width: 110,
           height: 110,
@@ -29,7 +31,6 @@ const AppCard = ({ item }) => {
             fontSize: 14,
             fontWeight: "bold",
             maxWidth: 100,
-            textAlign: "left",
           }}
         >
           {item.title}
@@ -56,7 +57,7 @@ const AppCard = ({ item }) => {
 
 const Recent = () => {
   return (
-    <View style={{ marginTop: 60 }}>
+    <View style={{ marginTop: 19 }}>
       <View
         style={{
           flexDirection: "row",

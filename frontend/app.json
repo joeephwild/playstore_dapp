@@ -13,6 +13,12 @@
         {
           "origin": "https://n"
         }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $APPVERSE to access your camera."
+        }
       ]
     ],
     "name": "frontend",

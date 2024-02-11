@@ -1,5 +1,6 @@
 import { live } from "@/utils";
 import { Video } from "expo-av";
+import { router } from "expo-router";
 import React, { useState } from "react";
 import {
   View,
@@ -8,6 +9,7 @@ import {
   StyleSheet,
   Dimensions,
   Text,
+  Pressable,
 } from "react-native";
 
 const CarouselWithIndicators = () => {
@@ -30,16 +32,25 @@ const CarouselWithIndicators = () => {
         scrollEventThrottle={16}
       >
         {live.map((item, index) => (
-          <View style={styles.image} key={index}>
+          <Pressable
+            onPress={() => router.push(`liveSection/${item.name}`)}
+            style={styles.image}
+            key={index}
+          >
             <Video
               source={{
                 uri: item.videoUrl,
               }}
               shouldPlay
+              style={{
+                backgroundColor: "#000",
+                height: 200,
+              }}
             />
             <View style={styles.indicatorsContainer}>
               {live.map((_, index) => (
                 <View
+                  key={index}
                   style={[
                     styles.indicator,
                     activeIndex === index && styles.activeIndicator,
@@ -48,7 +59,7 @@ const CarouselWithIndicators = () => {
               ))}
             </View>
             <Text style={styles.indicatorText}>Your Indicator Text Here</Text>
-          </View>
+          </Pressable>
         ))}
       </ScrollView>
     </View>
@@ -75,6 +86,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     backgroundColor: "gray",
     marginHorizontal: 5,
+    position: "absolute",
   },
   activeIndicator: {
     backgroundColor: "#000",

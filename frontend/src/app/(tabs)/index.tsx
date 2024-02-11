@@ -11,12 +11,15 @@ const Home = () => {
     <SafeAreaView
       style={{
         flex: 1,
-        alignContent: "center",
       }}
     >
-      <Header />
+      <Header title="Today" />
 
-      <ScrollView>
+      <ScrollView
+        style={{
+          flex: 1,
+        }}
+      >
         <CarouselWithIndicators />
         <Sponsored />
         <Recent />

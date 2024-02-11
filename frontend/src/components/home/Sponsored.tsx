@@ -3,6 +3,7 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { apps } from "@/utils";
 import { router } from "expo-router";
+import AppCard from "../card/AppCard";
 
 type Props = {
   image: any;
@@ -15,7 +16,7 @@ type Props = {
 const Sponsored = () => {
   const renderItem = ({ item }) => (
     <View>
-      <GameCard {...item} />
+      <AppCard {...item} />
     </View>
   );
 
@@ -26,7 +27,7 @@ const Sponsored = () => {
         <Text className="text-lg font-bold text-[#fff]">Sponsored</Text>
       </View>
 
-      <View className="flex-row flex-wrap  w-[100%]">
+      <View className="flex-row flex-wrap w-[100%]">
         <FlatList
           data={apps}
           renderItem={renderItem}
@@ -55,7 +56,9 @@ const GameCard = ({ image, rating, size, title, type }: Props) => {
       className="flex-row space-x-[16px]"
     >
       <Image
-        source={image}
+        source={{
+          uri: image
+        }}
         className="w-[78px] h-[78px] object-cover rounded-lg"
       />
       <View className="ml-[16px]">

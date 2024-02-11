@@ -1,7 +1,7 @@
 import { View, Text, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 
-const Header = () => {
+const Header = ({ title }) => {
   const [currentDate, setCurrentDate] = useState("");
   useEffect(() => {
     const getDATE = () => {
@@ -42,7 +42,7 @@ const Header = () => {
   return (
     <View className="h-[60px] px-5 flex-row items-center justify-between">
       <Text className="text-4xl text-[#fff] font-bold">
-        Today
+        {title}
         <Text className="text-xl text-[#888CAD]"> {currentDate}</Text>
       </Text>
       <Image
