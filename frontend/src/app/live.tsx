@@ -17,10 +17,10 @@ const live = () => {
     <SafeAreaView
       style={{
         flex: 1,
-        minHeight: "auto"
+        minHeight: "auto",
       }}
     >
-      <Camera style={{ flex: 1, minHeight: "auto" }} type={type}></Camera>
+     
     </SafeAreaView>
   );
 };

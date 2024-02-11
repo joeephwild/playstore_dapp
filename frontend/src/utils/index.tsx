@@ -63,8 +63,8 @@ export const apps = [
 
   {
     image:
-      "https://play-lh.googleusercontent.com/pwwvEGsBuYgGmuRIX3pEHwtkjfJV7fL_7jWHxPmqVsU7wTzGQSySut-mxk8-UwZLRsg=s48-rw",
-    title: "Game of Thrones: Conquest ™",
+      "https://play-lh.googleusercontent.com/T9WgkoSUXy7wa3_oMRWt-kxsLVtgwMKoX4IdHRU_mF33MKudjAIn1ls-J2XHHo06-rY=w240-h480-rw",
+    title: "Truecaller: Identify Caller ID",
     type: "Shooter Game",
     rating: 4.4,
     size: 240,
@@ -73,7 +73,7 @@ export const apps = [
       "https://play-lh.googleusercontent.com/qEkdhuh7FH_jyxor2OEqRkiQU02WaWR9v52G1-g4YvGjaSCcSesvIXLbUs6l-XPmO6c=w526-h296-rw",
       "https://play-lh.googleusercontent.com/Yi942ZK4rB5svPjk7pkgAVPGDgjL4FllHAUiA4YMMkePUhk0cMl7Y-yAUgm-9U7jRN8=w526-h296-rw",
     ],
-    creators: "Warner Bros. International Enterprises",
+    creators: "Truecaller",
     isFree: false,
   },
   {
@@ -140,7 +140,7 @@ export const apps = [
 
   {
     image:
-      "https://play-lh.googleusercontent.com/pwwvEGsBuYgGmuRIX3pEHwtkjfJV7fL_7jWHxPmqVsU7wTzGQSySut-mxk8-UwZLRsg=s48-rw",
+      "https://play-lh.googleusercontent.com/T9WgkoSUXy7wa3_oMRWt-kxsLVtgwMKoX4IdHRU_mF33MKudjAIn1ls-J2XHHo06-rY=w240-h480-rw",
     title: "Game of Thrones: Conquest ™",
     type: "Shooter Game",
     rating: 4.4,

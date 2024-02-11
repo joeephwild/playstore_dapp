@@ -19,7 +19,7 @@ export default function Layout() {
             // height: 75,
           },
           // tabBarShowLabel: false,
-          tabBarActiveTintColor: "#fff"
+          tabBarActiveTintColor: "#fff",
         }}
       >
         <Tabs.Screen
@@ -35,7 +35,7 @@ export default function Layout() {
             title: "Home",
           }}
         />
-           <Tabs.Screen
+        {/* <Tabs.Screen
           name="live"
           options={{
             tabBarIcon: ({ focused, color, size }) => (
@@ -47,7 +47,7 @@ export default function Layout() {
             ),
             title: "Live",
           }}
-        />
+        /> */}
         <Tabs.Screen
           name="apps"
           options={{

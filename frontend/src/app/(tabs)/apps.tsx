@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+import { ScrollView, Text } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/Header";
@@ -10,9 +10,14 @@ const apps = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Header title="Apps" />
-      <Banner />
-      <Sponsored />
-      <Recent />
+      <ScrollView style={{
+        flex: 1,
+        minHeight: "100%"
+      }}>
+        <Banner />
+        <Sponsored />
+        <Recent />
+      </ScrollView>
     </SafeAreaView>
   );
 };

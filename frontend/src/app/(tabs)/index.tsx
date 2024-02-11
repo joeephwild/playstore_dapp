@@ -18,6 +18,7 @@ const Home = () => {
       <ScrollView
         style={{
           flex: 1,
+          minHeight: "100%"
         }}
       >
         <CarouselWithIndicators />
