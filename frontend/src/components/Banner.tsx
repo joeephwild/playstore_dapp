@@ -11,6 +11,7 @@ const Banner = () => {
         style={{
           height: 200,
           gap: 9,
+          marginTop: 16,
         }}
       >
         {banner.map((item, index) => (

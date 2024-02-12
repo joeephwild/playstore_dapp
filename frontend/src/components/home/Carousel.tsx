@@ -37,28 +37,21 @@ const CarouselWithIndicators = () => {
             style={styles.image}
             key={index}
           >
-            <Video
-              source={{
-                uri: item.videoUrl,
-              }}
-              shouldPlay
-              style={{
-                backgroundColor: "#000",
-                height: 200,
-              }}
-            />
-            <View style={styles.indicatorsContainer}>
-              {live.map((_, index) => (
-                <View
-                  key={index}
-                  style={[
-                    styles.indicator,
-                    activeIndex === index && styles.activeIndicator,
-                  ]}
-                />
-              ))}
+            <View style={styles.videoContainer}>
+              <Video
+                source={{
+                  uri: item.videoUrl,
+                }}
+                shouldPlay
+                style={styles.video}
+              />
+              <View style={styles.overlayContainer}>
+                <View className="">
+                  <Text style={styles.indicatorText}>{item.name}</Text>
+                  <Text style={styles.indicatorDescription}>{item.description}</Text>
+                </View>
+              </View>
             </View>
-            <Text style={styles.indicatorText}>Your Indicator Text Here</Text>
           </Pressable>
         ))}
       </ScrollView>
@@ -87,6 +80,8 @@ const styles = StyleSheet.create({
     backgroundColor: "gray",
     marginHorizontal: 5,
     position: "absolute",
+    flexDirection: "row",
+    gap: 9,
   },
   activeIndicator: {
     backgroundColor: "#000",
@@ -94,12 +89,36 @@ const styles = StyleSheet.create({
     height: 6,
   },
   indicatorText: {
-    textAlign: "center",
+    textAlign: "left",
     marginTop: 5,
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "bold",
-    color: "#000",
+    color: "#fff",
   },
+  videoContainer: {
+    position: "relative",
+    overflow: "hidden",
+  },
+  video: {
+    width: "100%",
+    height: 200,
+    backgroundColor: "#000",
+  },
+  overlayContainer: {
+    position: "absolute",
+    top: 0,
+    left: 18,
+    bottom: 0,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  indicatorDescription: {
+    textAlign: "left",
+    marginTop: 5,
+    fontSize: 12,
+    fontWeight: "normal",
+    color: "#fff",
+  }
 });
 
 export default CarouselWithIndicators;

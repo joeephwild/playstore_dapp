@@ -16,6 +16,7 @@ const apps = () => {
       }}>
         <Banner />
         <Sponsored />
+        <Banner />
         <Recent />
       </ScrollView>
     </SafeAreaView>
