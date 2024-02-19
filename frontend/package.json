@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@bnb-chain/greenfield-js-sdk": "^1.2.0",
     "@devvie/bottom-sheet": "^0.3.0",
     "@gorhom/portal": "^1.0.14",
     "expo": "~50.0.6",
