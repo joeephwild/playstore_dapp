@@ -15,12 +15,12 @@ const Banner = () => {
         }}
       >
         {banner.map((item, index) => (
-          <View className="bg-white pl-9 w-[300px] h-[200px] ml-6">
+          <View className="border-2 border-white pl-9 w-[300px] h-[200px] ml-6">
             <Image
               source={{
                 uri: item.Image,
               }}
-              className="w-[200px] h-[200px] self-end items-end"
+              className="w-[300px] h-[300px] self-end items-end"
             />
           </View>
         ))}

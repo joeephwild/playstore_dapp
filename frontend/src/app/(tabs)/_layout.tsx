@@ -87,7 +87,7 @@ export default function Layout() {
             title: "DAO",
           }}
         />
-        <Tabs.Screen
+        {/* <Tabs.Screen
           name="search"
           options={{
             title: "Profile",
@@ -99,7 +99,7 @@ export default function Layout() {
               />
             ),
           }}
-        />
+        /> */}
       </Tabs>
     </>
   );

@@ -129,12 +129,16 @@ const Details = () => {
               borderBottomColor: "rgba(255, 255, 255, 0.08)",
               alignContent: "center",
               marginTop: 16,
+              paddingVertical: 8,
             }}
           >
             <View
               style={{
                 alignContent: "center",
                 alignItems: "center",
+                borderRightColor: "#fff",
+                borderRightWidth: 2,
+                paddingRight: 14
               }}
             >
               <Text className="text-[#fff]  font-semibold  px-2 py-1 rounded">
@@ -144,13 +148,29 @@ const Details = () => {
                 36K Reviews
               </Text>
             </View>
-            <View>
+            <View
+              style={{
+                alignContent: "center",
+                alignItems: "center",
+                borderRightColor: "#fff",
+                borderRightWidth: 2,
+                paddingRight: 19
+              }}
+            >
               <Ionicons name="cloud-download" size={24} color="#fff" />
               <Text className="rounded text-[#C4C4C4] text-center text-[12px] font-medium">
                 {appDetals.size}MB
               </Text>
             </View>
-            <View>
+            <View
+              style={{
+                alignContent: "center",
+                alignItems: "center",
+                borderRightColor: "#fff",
+                borderRightWidth: 2,
+                paddingRight: 14
+              }}
+            >
               <Text className="text-[#fff] text-center font-semibold px-2 py-1 rounded">
                 16+
               </Text>
