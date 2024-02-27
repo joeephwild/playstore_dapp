@@ -15,7 +15,7 @@ const Banner = () => {
         }}
       >
         {banner.map((item, index) => (
-          <View className="border-2 border-white pl-9 w-[300px] h-[200px] ml-6">
+          <View key={index} className="border-2 border-white pl-9 w-[300px] h-[200px] ml-6">
             <Image
               source={{
                 uri: item.Image,

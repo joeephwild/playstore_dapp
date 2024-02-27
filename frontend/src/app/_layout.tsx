@@ -47,9 +47,11 @@ export default function Layout() {
               backgroundColor: "#13141C",
             },
           }}
-          initialRouteName="(tabs)"
+          initialRouteName="index"
         >
+          <Stack.Screen name="index" />
           <Stack.Screen name="(tabs)" />
+          <Stack.Screen name="(drawer)" />
           <Stack.Screen name="appDetail/[name]" />
           <Stack.Screen name="liveSection/[name]" />
           <Stack.Screen name="profile" />
