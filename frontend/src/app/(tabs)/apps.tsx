@@ -10,10 +10,12 @@ const apps = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Header title="Apps" />
-      <ScrollView style={{
-        flex: 1,
-        minHeight: "100%"
-      }}>
+      <ScrollView
+        style={{
+          flex: 1,
+          minHeight: "100%",
+        }}
+      >
         <Banner />
         <Sponsored />
         <Banner />

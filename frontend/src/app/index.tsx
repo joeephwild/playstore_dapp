@@ -119,9 +119,9 @@ const index = () => {
             {currentIndex != 3 && (
               <TouchableOpacity
                 onPress={handleNext}
-                className="bg-[#ADF802] rounded-[40px] py-[16px] mt-[10px] items-center justify-center w-[80%]"
+                className="bg-[#0B95FF] rounded-[40px] py-[16px] mt-[10px] items-center justify-center w-[80%]"
               >
-                <Text className="text-[16px]  font-opensans-bold text-[#000]">
+                <Text className="text-[16px]  font-opensans-bold text-[#fff]">
                   Get Started
                 </Text>
               </TouchableOpacity>
@@ -130,8 +130,8 @@ const index = () => {
               <View className="flex-row items-center px-9 space-x-[120px]">
                 {address ? (
                   <View className="w-full">
-                    <TouchableOpacity onPress={() => router.push("/(tabs)")} className="bg-[#ADF802] rounded-[40px] py-[16px] px-[40px] mt-[20px] items-center justify-center">
-                      <Text className="text-[16px]  font-opensans-bold text-[#000]">
+                    <TouchableOpacity onPress={() => router.push("/(tabs)")} className="bg-[#0B95FF] rounded-[40px] py-[16px] px-[40px] mt-[20px] items-center justify-center">
+                      <Text className="text-[16px]  font-opensans-bold text-[#fff]">
                         Explore
                       </Text>
                     </TouchableOpacity>
@@ -145,9 +145,9 @@ const index = () => {
                   <View className="w-full">
                     <TouchableOpacity
                         onPress={() => open()}
-                      className="bg-[#ADF802] rounded-[40px] py-[16px] px-[40px] mt-[20px] items-center justify-center"
+                      className="bg-[#0B95FF] rounded-[40px] py-[16px] px-[40px] mt-[20px] items-center justify-center"
                     >
-                      <Text className="text-[16px]  font-opensans-bold text-[#000]">
+                      <Text className="text-[16px]  font-opensans-bold text-[#fff]">
                         Connect Wallet
                       </Text>
                     </TouchableOpacity>

@@ -9,6 +9,8 @@ import {
 import { PortalProvider } from "@gorhom/portal";
 import "../global.css";
 import { Stack } from "expo-router";
+import { Text, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 // 1. Get projectId at https://cloud.walletconnect.com
 const projectId = "faacd6df1eda3779a685e127d4cac05a";
@@ -49,12 +51,57 @@ export default function Layout() {
           }}
           initialRouteName="index"
         >
-          <Stack.Screen name="index" />
-          <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="(drawer)" />
-          <Stack.Screen name="appDetail/[name]" />
-          <Stack.Screen name="liveSection/[name]" />
-          <Stack.Screen name="profile" />
+          <Stack.Screen
+            name="index"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="(tabs)"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="(drawer)"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="appDetail/[name]"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="liveSection/[name]"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="profile"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="createProposal"
+            options={{
+              headerLeft: () => {
+                return (
+                  <View className="flex-row items-start">
+                    <Ionicons name="arrow-back" size={24} color="#fff" />
+                    <Text className="text-white text-[19px] font-semibold">
+                      Proposal
+                    </Text>
+                  </View>
+                );
+              },
+            }}
+          />
         </Stack>
       </PortalProvider>
       <Web3Modal />

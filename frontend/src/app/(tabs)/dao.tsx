@@ -3,6 +3,8 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Header from "@/components/Header";
 import ProposalCard from "@/components/card/ProposalCard";
+import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 
 const proposals = [
   {
@@ -61,8 +63,11 @@ const dao = () => {
           <ProposalCard key={index} {...item} />
         ))}
       </ScrollView>
-      <TouchableOpacity>
-    
+      <TouchableOpacity
+        onPress={() => router.navigate("/createProposal")}
+        className="absolute bottom-0 right-9 bg-[#0B95FF] size-[60px] items-center justify-center rounded-full"
+      >
+        <Ionicons name="add" size={24} color="#000" />
       </TouchableOpacity>
     </SafeAreaView>
   );
