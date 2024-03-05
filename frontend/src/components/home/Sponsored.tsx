@@ -23,7 +23,7 @@ const Sponsored = () => {
   return (
     <View className="">
       <View className="flex-row items-center space-x-[8px]">
-        <Ionicons name="star" color="#0B95FF" size={16} />
+        <Ionicons name="star" color="#ffe500" size={16} />
         <Text className="text-lg font-bold text-[#fff]">Sponsored</Text>
       </View>
 
@@ -57,7 +57,7 @@ const GameCard = ({ image, rating, size, title, type }: Props) => {
     >
       <Image
         source={{
-          uri: image
+          uri: image,
         }}
         className="w-[78px] h-[78px] object-cover rounded-lg"
       />

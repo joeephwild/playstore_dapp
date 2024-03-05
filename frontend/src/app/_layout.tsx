@@ -1,5 +1,5 @@
 import "@walletconnect/react-native-compat";
-import { WagmiConfig } from "wagmi";
+import { WagmiConfig, useSwitchNetwork } from "wagmi";
 import { mainnet, polygon, arbitrum } from "viem/chains";
 import {
   createWeb3Modal,
@@ -11,6 +11,8 @@ import "../global.css";
 import { Stack } from "expo-router";
 import { Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { useEffect } from "react";
+import { AuthProvider } from "@/context/AuthContext";
 
 // 1. Get projectId at https://cloud.walletconnect.com
 const projectId = "faacd6df1eda3779a685e127d4cac05a";
@@ -42,67 +44,75 @@ export default function Layout() {
   return (
     <WagmiConfig config={wagmiConfig}>
       <PortalProvider>
-        <Stack
-          screenOptions={{
-            headerShown: false,
-            contentStyle: {
-              backgroundColor: "#13141C",
-            },
-          }}
-          initialRouteName="index"
-        >
-          <Stack.Screen
-            name="index"
-            options={{
+        <AuthProvider>
+          <Stack
+            screenOptions={{
               headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="(tabs)"
-            options={{
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="(drawer)"
-            options={{
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="appDetail/[name]"
-            options={{
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="liveSection/[name]"
-            options={{
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="profile"
-            options={{
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="createProposal"
-            options={{
-              headerLeft: () => {
-                return (
-                  <View className="flex-row items-start">
-                    <Ionicons name="arrow-back" size={24} color="#fff" />
-                    <Text className="text-white text-[19px] font-semibold">
-                      Proposal
-                    </Text>
-                  </View>
-                );
+              contentStyle: {
+                backgroundColor: "#13141C",
               },
             }}
-          />
-        </Stack>
+            initialRouteName="index"
+          >
+            <Stack.Screen
+              name="index"
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="(tabs)"
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="(drawer)"
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="appDetail/[name]"
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="liveSection/[name]"
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="profile"
+              options={{
+                headerShown: false,
+              }}
+            />
+              <Stack.Screen
+              name="upload"
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="createProposal"
+              options={{
+                headerLeft: () => {
+                  return (
+                    <View className="flex-row items-start">
+                      <Ionicons name="arrow-back" size={24} color="#fff" />
+                      <Text className="text-white text-[19px] font-semibold">
+                        Proposal
+                      </Text>
+                    </View>
+                  );
+                },
+              }}
+            />
+          </Stack>
+        </AuthProvider>
       </PortalProvider>
       <Web3Modal />
     </WagmiConfig>

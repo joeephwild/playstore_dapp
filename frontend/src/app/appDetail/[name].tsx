@@ -97,7 +97,7 @@ const Details = () => {
                 </Text>
                 <Text
                   style={{
-                    color: "#0B95FF",
+                    color: "#ffe500",
                     fontWeight: "700",
                   }}
                 >
@@ -138,7 +138,7 @@ const Details = () => {
                 alignItems: "center",
                 borderRightColor: "#fff",
                 borderRightWidth: 2,
-                paddingRight: 14
+                paddingRight: 14,
               }}
             >
               <Text className="text-[#fff]  font-semibold  px-2 py-1 rounded">
@@ -154,7 +154,7 @@ const Details = () => {
                 alignItems: "center",
                 borderRightColor: "#fff",
                 borderRightWidth: 2,
-                paddingRight: 19
+                paddingRight: 19,
               }}
             >
               <Ionicons name="cloud-download" size={24} color="#fff" />
@@ -168,7 +168,7 @@ const Details = () => {
                 alignItems: "center",
                 borderRightColor: "#fff",
                 borderRightWidth: 2,
-                paddingRight: 14
+                paddingRight: 14,
               }}
             >
               <Text className="text-[#fff] text-center font-semibold px-2 py-1 rounded">

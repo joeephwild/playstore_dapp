@@ -57,9 +57,38 @@ const search = () => {
             }}
           />
         </View>
-        
       </ImageBackground>
-      <Text>ello worl</Text>
+      <View className="text-start gap-y-6">
+        <Text className="text-white text-2xl font-semibold">Joseph_dev</Text>
+        <Text className="text-[#fff] text-xs font-semibold w-[50%] pt-5">
+          This means that for a given key, you can store a unique instance of a
+          value type. In this case, each "user" gets credited their own balance.
+        </Text>
+        <View className="flex-row items-center justify-around gap-9 px-2 py-2">
+          <TouchableOpacity
+            style={{
+              backgroundColor: "#007FFF",
+              paddingHorizontal: 24,
+              paddingVertical: 10,
+              borderRadius: 4,
+            }}
+            onPress={() => router.push("/upload")}
+          >
+            <Text className="text-white font-bold text-[16px]">Upload App</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              backgroundColor: "#007FFF",
+              paddingHorizontal: 24,
+              paddingVertical: 10,
+              borderRadius: 4,
+            }}
+            // onPress={() => router.push("/upload")}
+          >
+            <Text className="text-white font-bold text-[16px]">Follow Profile</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 };

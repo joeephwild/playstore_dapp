@@ -65,7 +65,7 @@ const dao = () => {
       </ScrollView>
       <TouchableOpacity
         onPress={() => router.navigate("/createProposal")}
-        className="absolute bottom-0 right-9 bg-[#0B95FF] size-[60px] items-center justify-center rounded-full"
+        className="absolute bottom-0 right-9 bg-[#ffe500] size-[60px] items-center justify-center rounded-full"
       >
         <Ionicons name="add" size={24} color="#000" />
       </TouchableOpacity>

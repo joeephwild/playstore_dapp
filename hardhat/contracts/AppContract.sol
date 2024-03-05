@@ -44,4 +44,12 @@ contract AppContract is ERC1155, Ownable {
         require(msg.value == Packs[id].price, "Pay the correct amount");
         _mint(to, id, 1, "");
     }
+
+    function getAllPacks() external view returns (Pack[] memory) {
+    Pack[] memory packs = new Pack[](_idCount.current());
+    for (uint256 i = 1; i < _idCount.current(); i++) {
+        packs[i - 1] = Packs[i];
+    }
+    return packs;
+}
 }

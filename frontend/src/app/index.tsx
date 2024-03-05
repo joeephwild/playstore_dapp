@@ -9,7 +9,7 @@ import {
   GestureHandlerRootView,
   ScrollView,
 } from "react-native-gesture-handler";
-import { useAccount } from "wagmi";
+import { useAccount, useSwitchNetwork } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi-react-native";
 
 const onBoradingSteps = [
@@ -44,6 +44,8 @@ const index = () => {
   const { address } = useAccount();
   const [currentIndex, setCurrentIndex] = useState(0);
   const data = onBoradingSteps[currentIndex];
+
+ 
 
   const handleNext = () => {
     if (currentIndex === onBoradingSteps.length - 1) {
@@ -119,9 +121,9 @@ const index = () => {
             {currentIndex != 3 && (
               <TouchableOpacity
                 onPress={handleNext}
-                className="bg-[#0B95FF] rounded-[40px] py-[16px] mt-[10px] items-center justify-center w-[80%]"
+                className="bg-[#ffe500] rounded-[40px] py-[16px] mt-[10px] items-center justify-center w-[80%]"
               >
-                <Text className="text-[16px]  font-opensans-bold text-[#fff]">
+                <Text className="text-[16px]  font-opensans-bold text-[#000]">
                   Get Started
                 </Text>
               </TouchableOpacity>
@@ -130,13 +132,16 @@ const index = () => {
               <View className="flex-row items-center px-9 space-x-[120px]">
                 {address ? (
                   <View className="w-full">
-                    <TouchableOpacity onPress={() => router.push("/(tabs)")} className="bg-[#0B95FF] rounded-[40px] py-[16px] px-[40px] mt-[20px] items-center justify-center">
-                      <Text className="text-[16px]  font-opensans-bold text-[#fff]">
+                    <TouchableOpacity
+                      onPress={() => router.push("/(tabs)")}
+                      className="bg-[#ffe500] rounded-[40px] py-[16px] px-[40px] mt-[20px] items-center justify-center"
+                    >
+                      <Text className="text-[16px]  font-opensans-bold text-[#000]">
                         Explore
                       </Text>
                     </TouchableOpacity>
                     <TouchableOpacity className="items-center justify-center mt-5">
-                      <Text className="text-[12px] font-opensans-regular text-[#fff]">
+                      <Text className="text-[12px] font-opensans-regular text-[#000]">
                         Disconnect Wallet
                       </Text>
                     </TouchableOpacity>
@@ -144,10 +149,10 @@ const index = () => {
                 ) : (
                   <View className="w-full">
                     <TouchableOpacity
-                        onPress={() => open()}
-                      className="bg-[#0B95FF] rounded-[40px] py-[16px] px-[40px] mt-[20px] items-center justify-center"
+                      onPress={() => open()}
+                      className="bg-[#ffe500] rounded-[40px] py-[16px] px-[40px] mt-[20px] items-center justify-center"
                     >
-                      <Text className="text-[16px]  font-opensans-bold text-[#fff]">
+                      <Text className="text-[16px]  font-opensans-bold text-[#000]">
                         Connect Wallet
                       </Text>
                     </TouchableOpacity>

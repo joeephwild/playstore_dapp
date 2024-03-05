@@ -12,7 +12,6 @@ import { router } from "expo-router";
 import * as ImagePicker from "expo-image-picker";
 import { useAccount, useContractWrite, usePrepareContractWrite } from "wagmi";
 import { StoreContractAddress, storeabi } from "@/utils/constant";
-import { handleUpload, uploadJson } from "@/utils/upload";
 // import { selectAndUploadImage } from "@/utils/upload";
 
 const CreateProposal = () => {
@@ -40,6 +39,7 @@ const CreateProposal = () => {
   };
 
   const pickImage = async () => {
+    // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
@@ -50,28 +50,14 @@ const CreateProposal = () => {
     console.log(result);
 
     if (!result.canceled) {
-      const fileUri = result.assets[0].uri;
-      const fileName = fileUri.split("/").pop();
-
-      const res = await handleUpload(fileUri, fileName);
-      console.log(res);
+      //   const res = await uploadToIPFS(result.assets[0].uri);
+      //   console.log(res);
     }
   };
 
   const handleSubmit = async () => {
     // const res = await selectAndUploadImage();
     // console.log(res, "upload done");
-
-    const data = {
-      name: "A custom name. If you don't provide this value, it will automatically be populated by the original name of the file you've uploaded",
-      keyvalues: {
-        customKey: "customValue",
-        customKey2: "customValue2",
-      },
-    };
-
-    const res = await uploadJson(data);
-    console.log(res, "data");
   };
 
   return (
@@ -190,7 +176,7 @@ const CreateProposal = () => {
             position: "absolute",
             bottom: 0,
           }}
-          onPress={handleSubmit}
+          onPress={() => write()}
         >
           <Text style={{ color: "#fff", fontSize: 16 }}>Submit</Text>
         </TouchableOpacity>
