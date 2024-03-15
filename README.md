@@ -56,10 +56,6 @@ Developers can publish their dApps by following the provided guidelines and util
 
 This was my first time on the polkadot chain but thanks to the workshop i was able to write my first smart contract, 
 
-resouces i used
-[Encode ink smart contract workshop](https://www.youtube.com/watch?v=Ccbzavn98dw)
-[Encode ink smart contract playlist](https://www.youtube.com/watch?v=JPW1JLqKNzY&list=PLfEHHr3qexv_60ljyklbYFuG6XJ4kJWQZ)
-
 ---
 
 Thank you for choosing the Nifty Gateway. We believe in the power of decentralization to transform the future of application distribution in the blockchain and cryptocurrency ecosystem. Join us on this journey towards a more open, transparent, and inclusive digital economy.
