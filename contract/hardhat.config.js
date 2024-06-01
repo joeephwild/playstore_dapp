@@ -15,16 +15,16 @@ module.exports = {
     },
     zkSyncTestnet: {
       url: "https://zksync2-testnet.zksync.dev",
-      chainId: 280,
+      chainId: 300,
       gasPrice: 20000000000,
       accounts: {mnemonic: private_key}
     },
-    mainnet: {
-      url: "https://bsc-dataseed.bnbchain.org/",
-      chainId: 56,
+    zkSyncMainnet: {
+      url: "https://mainnet.era.zksync.io",
+      chainId: 324,
       gasPrice: 20000000000,
       accounts: {mnemonic: private_key}
-    }
+    },
   },
 
 };
