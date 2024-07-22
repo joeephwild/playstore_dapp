@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "IAppcontract": {
+      "address": "0x0ACd81C24ddC491Cb2a3627e9EC0F4e97023F27b",
+      "startBlock": 6358553
+    }
+  }
+}
